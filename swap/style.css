@@ -89,7 +89,6 @@ body a {
   width: 100%;
   border-radius: 20px;
   padding: 30px;
-  overflow: auto;
   min-height: calc(100vh - 185px);
   -webkit-animation: slide-left 1.5s ease-in-out forwards;
           animation: slide-left 1.5s ease-in-out forwards;
@@ -290,8 +289,13 @@ body a {
   border-radius: 20px;
   color: white;
   margin-top: 20px;
-  -webkit-animation: slide-up 1.5s ease-in-out forwards;
-          animation: slide-up 1.5s ease-in-out forwards;
+}
+
+@media screen and (min-width: 605px) {
+  .container .sitemap {
+    -webkit-animation: slide-up 1.5s ease-in-out forwards;
+            animation: slide-up 1.5s ease-in-out forwards;
+  }
 }
 
 .container .sitemap .sitemap-alllinks {

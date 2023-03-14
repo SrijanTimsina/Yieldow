@@ -76,7 +76,6 @@ body {
 			width: 100%;
 			border-radius: 20px;
 			padding: 30px;
-			overflow: auto;
 			min-height: calc(100vh - 185px);
 			animation: slide-left 1.5s ease-in-out forwards;
 
@@ -233,7 +232,10 @@ body {
 		border-radius: 20px;
 		color: white;
 		margin-top: 20px;
-		animation: slide-up 1.5s ease-in-out forwards;
+
+		@media screen and (min-width: 605px) {
+			animation: slide-up 1.5s ease-in-out forwards;
+		}
 
 		.sitemap-alllinks {
 			display: flex;
