@@ -91,13 +91,8 @@ body a {
   padding: 30px;
   overflow: auto;
   min-height: calc(100vh - 185px);
-}
-
-@media screen and (min-width: 605px) {
-  .container .main .main-section-container {
-    -webkit-animation: slide-left 1.5s ease-in-out forwards;
-            animation: slide-left 1.5s ease-in-out forwards;
-  }
+  -webkit-animation: slide-left 1.5s ease-in-out forwards;
+          animation: slide-left 1.5s ease-in-out forwards;
 }
 
 .container .main .main-section-container .heading {
@@ -295,13 +290,8 @@ body a {
   border-radius: 20px;
   color: white;
   margin-top: 20px;
-}
-
-@media screen and (min-width: 606px) {
-  .container .sitemap {
-    -webkit-animation: slide-up 1.5s ease-in-out forwards;
-            animation: slide-up 1.5s ease-in-out forwards;
-  }
+  -webkit-animation: slide-up 1.5s ease-in-out forwards;
+          animation: slide-up 1.5s ease-in-out forwards;
 }
 
 .container .sitemap .sitemap-alllinks {

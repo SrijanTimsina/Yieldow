@@ -79,8 +79,8 @@ body {
 			overflow: auto;
 			min-height: calc(100vh - 185px);
 
+			animation: slide-left 1.5s ease-in-out forwards;
 			@media screen and (min-width: 605px) {
-				animation: slide-left 1.5s ease-in-out forwards;
 			}
 
 			.heading {
@@ -236,9 +236,9 @@ body {
 		border-radius: 20px;
 		color: white;
 		margin-top: 20px;
+		animation: slide-up 1.5s ease-in-out forwards;
 
 		@media screen and (min-width: 606px) {
-			animation: slide-up 1.5s ease-in-out forwards;
 		}
 
 		.sitemap-alllinks {
