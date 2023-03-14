@@ -1,7 +1,7 @@
 document.querySelectorAll(".navbar").forEach((el) => {
 	el.innerHTML = `<div class="empty"></div>
     <div class="logo">
-    <a href="#home">
+    <a href="#home" class='navbar-home-btn'>
         <img src="./images/logo.png" alt="YieldoW"/>
         </a>
     </div>
@@ -25,6 +25,11 @@ const activeUsers = document.getElementById("active-users");
 const bestTokens = document.getElementById("best-token");
 const analyticsBtn = document.getElementById("analytics-btn");
 const analyticsContainer = document.getElementById("analytics");
+const sitemapHome = document.getElementById("sitemap-home-btn");
+const sitemapAnalytics = document.getElementById(
+	"sitemap-analytics-btn"
+);
+const navbarHome = document.querySelectorAll(".navbar-home-btn");
 
 function scrollToSmoothly(pos, time) {
 	var currentPos = window.pageYOffset;
@@ -54,6 +59,18 @@ function scrollToSmoothly(pos, time) {
 }
 analyticsBtn.addEventListener("click", () => {
 	analyticsContainer.classList.add("show");
+	var clientHeight = document.getElementById("home").clientHeight;
+	scrollToSmoothly(clientHeight, 600);
+});
+navbarHome.forEach((el) =>
+	el.addEventListener("click", () => {
+		scrollToSmoothly(0, 600);
+	})
+);
+sitemapHome.addEventListener("click", () => {
+	scrollToSmoothly(0, 600);
+});
+sitemapAnalytics.addEventListener("click", () => {
 	var clientHeight = document.getElementById("home").clientHeight;
 	scrollToSmoothly(clientHeight, 600);
 });
