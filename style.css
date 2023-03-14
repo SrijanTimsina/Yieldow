@@ -1,0 +1,571 @@
+@import url("https://fonts.googleapis.com/css2?family=Kanit&family=Poppins:wght@700&family=Roboto&display=swap");
+html {
+	scroll-behavior: smooth;
+}
+
+* {
+	margin: 0;
+	padding: 0;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+body {
+	font-family: "Kanit", sans-serif;
+}
+
+body a {
+	text-decoration: none;
+	cursor: pointer;
+}
+
+body .container {
+	background-color: #009051;
+}
+
+.bg-container {
+	background-image: url("./images/BACKGROUND.png");
+	background-position: center center;
+	background-size: cover;
+	background-repeat: no-repeat;
+	margin: auto;
+	max-width: 800px;
+}
+
+.bg-container .navbar {
+	background-color: #009051;
+	width: 100%;
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-pack: justify;
+	-ms-flex-pack: justify;
+	justify-content: space-between;
+	-webkit-box-align: center;
+	-ms-flex-align: center;
+	align-items: center;
+	border-radius: 20px;
+	padding: 20px;
+}
+
+.bg-container .navbar .logo {
+	cursor: pointer;
+}
+
+.bg-container .navbar .logo img {
+	height: 30px;
+}
+
+.bg-container .navbar .empty {
+	width: 154px;
+}
+
+.bg-container .navbar .social a {
+	cursor: pointer;
+}
+
+.bg-container .navbar .social a img {
+	height: 30px;
+	width: 30px;
+	margin-left: 20px;
+}
+
+@media screen and (max-width: 605px) {
+	.bg-container .navbar .empty {
+		display: none;
+	}
+	.bg-container .navbar .logo img {
+		width: 100px;
+		height: auto;
+	}
+	.bg-container .navbar .social a img {
+		margin-left: 10px;
+	}
+}
+
+.bg-container .home-container {
+	padding: 40px;
+	width: 100%;
+	min-height: 100vh;
+	opacity: 0;
+	-webkit-animation: fade-in 1.5s ease-in-out forwards;
+	animation: fade-in 1.5s ease-in-out forwards;
+}
+
+@-webkit-keyframes fade-in {
+	from {
+		opacity: 0;
+	}
+	to {
+		opacity: 1;
+	}
+}
+
+@keyframes fade-in {
+	from {
+		opacity: 0;
+	}
+	to {
+		opacity: 1;
+	}
+}
+
+.bg-container .home-container .main-section {
+	color: #009051;
+	padding: 50px 35px;
+}
+
+.bg-container .home-container .main-section h1 {
+	font-weight: bolder;
+	font-size: 48px;
+}
+
+.bg-container .home-container .main-section p {
+	font-weight: bolder;
+	font-size: 20px;
+	margin-top: 20px;
+}
+
+.bg-container .home-container .main-section .buttons {
+	margin-top: 50px;
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	gap: 20px;
+}
+
+.bg-container .home-container .main-section .buttons .btn {
+	padding: 20px 30px;
+	background-color: red;
+	border-radius: 15px;
+	outline: none;
+}
+
+.bg-container .home-container .main-section .buttons .app-btn,
+.bg-container
+	.home-container
+	.main-section
+	.buttons
+	.analytics-btn:hover,
+.bg-container
+	.home-container
+	.main-section
+	.buttons
+	.analytics-btn:focus {
+	background-color: #009051;
+	color: white;
+	border: white 3px solid;
+}
+
+.bg-container .home-container .main-section .buttons .analytics-btn,
+.bg-container .home-container .main-section .buttons .app-btn:hover,
+.bg-container .home-container .main-section .buttons .app-btn:focus {
+	background-color: white;
+	color: #009051;
+	border: #009051 3px solid;
+}
+
+@media screen and (max-width: 605px) {
+	.bg-container .home-container .main-section h1 {
+		font-size: 24px;
+	}
+	.bg-container .home-container .main-section p {
+		font-size: 16px;
+	}
+	.bg-container .home-container .main-section .buttons {
+		-webkit-box-orient: vertical;
+		-webkit-box-direction: normal;
+		-ms-flex-direction: column;
+		flex-direction: column;
+		width: -webkit-max-content;
+		width: -moz-max-content;
+		width: max-content;
+		gap: 10px;
+	}
+}
+
+.bg-container .analytics-container {
+	min-height: 100vh;
+	padding: 20px;
+}
+
+.bg-container .analytics-container .analytics-content {
+	padding: 20px;
+	border-radius: 20px;
+	background-color: rgba(255, 255, 255, 0.3);
+}
+
+.bg-container .analytics-container .analytics-content .data {
+	margin-top: 25px;
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-orient: horizontal;
+	-webkit-box-direction: normal;
+	-ms-flex-direction: row;
+	flex-direction: row;
+	-webkit-box-pack: justify;
+	-ms-flex-pack: justify;
+	justify-content: space-between;
+	padding: 20px 50px;
+	background-color: white;
+	border-radius: 20px;
+}
+
+.bg-container
+	.analytics-container
+	.analytics-content
+	.data
+	.information {
+	text-align: center;
+	color: #009051;
+}
+
+.bg-container
+	.analytics-container
+	.analytics-content
+	.data
+	.information
+	.bold {
+	font-size: 24px;
+	font-weight: bolder;
+}
+
+.bg-container
+	.analytics-container
+	.analytics-content
+	.data
+	.information
+	.small {
+	font-weight: bolder;
+	font-size: 16px;
+}
+
+@media screen and (max-width: 605px) {
+	.bg-container .analytics-container .analytics-content .data {
+		padding: 20px 20px;
+	}
+	.bg-container
+		.analytics-container
+		.analytics-content
+		.data
+		.information
+		.bold {
+		font-size: 20px;
+	}
+	.bg-container
+		.analytics-container
+		.analytics-content
+		.data
+		.information
+		.small {
+		font-size: 12px;
+	}
+}
+
+.bg-container
+	.analytics-container
+	.analytics-content
+	.chart-container {
+	background-color: white;
+	padding: 30px;
+	color: #009051;
+	margin-top: 20px;
+	border-radius: 20px;
+}
+
+.bg-container
+	.analytics-container
+	.analytics-content
+	.chart-container
+	h1 {
+	margin-bottom: 30px;
+}
+
+.bg-container
+	.analytics-container
+	.analytics-content
+	.chart-container
+	.volume-hun {
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-pack: center;
+	-ms-flex-pack: center;
+	justify-content: center;
+	-webkit-box-align: center;
+	-ms-flex-align: center;
+	align-items: center;
+}
+
+.bg-container
+	.analytics-container
+	.analytics-content
+	.chart-container
+	.volume-hun
+	.square {
+	height: 14px;
+	width: 14px;
+	background-color: #009051;
+	margin-right: 5px;
+}
+
+.bg-container
+	.analytics-container
+	.analytics-content
+	.chart-container
+	.chart {
+	overflow-x: auto;
+	overflow-y: hidden;
+	width: 100%;
+	height: 200px;
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-transform: scaleY(-1);
+	transform: scaleY(-1);
+	gap: 6px;
+	padding: 20px 0;
+}
+
+.bg-container
+	.analytics-container
+	.analytics-content
+	.chart-container
+	.chart
+	.line-x {
+	height: calc(100% + 25px);
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-orient: vertical;
+	-webkit-box-direction: normal;
+	-ms-flex-direction: column;
+	flex-direction: column;
+	-webkit-box-pack: justify;
+	-ms-flex-pack: justify;
+	justify-content: space-between;
+	-webkit-box-align: center;
+	-ms-flex-align: center;
+	align-items: center;
+	-webkit-transform: translateY(-12px) scaleY(-1);
+	transform: translateY(-12px) scaleY(-1);
+	margin-right: 10px;
+}
+
+.bg-container
+	.analytics-container
+	.analytics-content
+	.chart-container
+	section {
+	-webkit-transform: translateY(-10px);
+	transform: translateY(-10px);
+}
+
+.bg-container
+	.analytics-container
+	.analytics-content
+	.chart-container
+	section
+	p {
+	height: 10px;
+	-webkit-transform: scaleY(-1);
+	transform: scaleY(-1);
+	width: 100%;
+	text-align: center;
+}
+
+.bg-container
+	.analytics-container
+	.analytics-content
+	.chart-container
+	section
+	.bar {
+	width: 12px;
+	background-color: #009051;
+}
+
+.bg-container
+	.analytics-container
+	.analytics-content
+	.users-best-data {
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	gap: 25px;
+	-webkit-box-pack: justify;
+	-ms-flex-pack: justify;
+	justify-content: space-between;
+	margin-top: 20px;
+}
+
+.bg-container
+	.analytics-container
+	.analytics-content
+	.users-best-data
+	.most-active-users,
+.bg-container
+	.analytics-container
+	.analytics-content
+	.users-best-data
+	.best-token {
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-orient: vertical;
+	-webkit-box-direction: normal;
+	-ms-flex-direction: column;
+	flex-direction: column;
+	gap: 20px;
+	width: 100%;
+	background-color: white;
+	padding: 20px;
+	border-radius: 20px;
+	color: green;
+}
+
+.bg-container
+	.analytics-container
+	.analytics-content
+	.users-best-data
+	.most-active-users
+	h1,
+.bg-container
+	.analytics-container
+	.analytics-content
+	.users-best-data
+	.best-token
+	h1 {
+	font-size: 24px;
+	text-align: center;
+}
+
+.bg-container
+	.analytics-container
+	.analytics-content
+	.users-best-data
+	.most-active-users
+	.flex,
+.bg-container
+	.analytics-container
+	.analytics-content
+	.users-best-data
+	.best-token
+	.flex {
+	padding: 0 20px;
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-pack: justify;
+	-ms-flex-pack: justify;
+	justify-content: space-between;
+}
+
+.bg-container
+	.analytics-container
+	.analytics-content
+	.users-best-data
+	.most-active-users
+	.flex
+	p,
+.bg-container
+	.analytics-container
+	.analytics-content
+	.users-best-data
+	.best-token
+	.flex
+	p {
+	text-align: center;
+}
+
+.bg-container
+	.analytics-container
+	.analytics-content
+	.users-best-data
+	.most-active-users
+	.tokens,
+.bg-container
+	.analytics-container
+	.analytics-content
+	.users-best-data
+	.best-token
+	.tokens {
+	color: black;
+	padding: 20px;
+	background-color: #d6d5d5;
+	border-radius: 20px;
+}
+
+@media screen and (max-width: 605px) {
+	.bg-container
+		.analytics-container
+		.analytics-content
+		.users-best-data {
+		-webkit-box-orient: vertical;
+		-webkit-box-direction: normal;
+		-ms-flex-direction: column;
+		flex-direction: column;
+	}
+}
+
+.bg-container .analytics-container .analytics-content .sitemap {
+	background-color: #009051;
+	padding: 20px;
+	border-radius: 20px;
+	color: white;
+	margin-top: 20px;
+}
+
+.bg-container
+	.analytics-container
+	.analytics-content
+	.sitemap
+	.sitemap-alllinks {
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-pack: justify;
+	-ms-flex-pack: justify;
+	justify-content: space-between;
+	-webkit-box-align: center;
+	-ms-flex-align: center;
+	align-items: center;
+	margin-top: 20px;
+}
+
+.bg-container
+	.analytics-container
+	.analytics-content
+	.sitemap
+	.sitemap-alllinks
+	a {
+	color: white;
+	font-size: 20px;
+	margin-right: 20px;
+}
+
+.bg-container
+	.analytics-container
+	.analytics-content
+	.sitemap
+	.sitemap-alllinks
+	.sitemap-social
+	img {
+	height: 30px;
+	width: 30px;
+	margin-left: 20px;
+}
+
+@media screen and (max-width: 605px) {
+	.bg-container
+		.analytics-container
+		.analytics-content
+		.sitemap
+		.sitemap-alllinks {
+		-webkit-box-orient: vertical;
+		-webkit-box-direction: normal;
+		-ms-flex-direction: column;
+		flex-direction: column;
+		gap: 20px;
+	}
+}

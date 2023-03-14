@@ -1,0 +1,286 @@
+@import url("https://fonts.googleapis.com/css2?family=Kanit&family=Poppins:wght@700&family=Roboto&display=swap");
+
+$primary-col: #009051;
+$color-gray: #d6d5d5;
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+body {
+	font-family: "Kanit", sans-serif;
+
+	a {
+		text-decoration: none;
+		cursor: pointer;
+	}
+}
+
+.container {
+	padding: 10px;
+	background-color: $color-gray;
+	min-height: 100vh;
+	position: relative;
+	.main {
+		display: flex;
+		gap: 10px;
+		overflow: hidden;
+		.sidebar-container {
+			background-color: $primary-col;
+			padding: 50px;
+			border-radius: 20px;
+
+			@media screen and(min-width:605px) {
+				animation: slide-right 1.5s ease-in-out forwards;
+			}
+
+			ul {
+				list-style: none;
+				color: white;
+				margin-top: 50px;
+
+				li {
+					margin-bottom: 20px;
+				}
+			}
+			.logo {
+				img {
+					height: 20px;
+				}
+			}
+			.sidebar-social {
+				display: flex;
+				justify-content: space-between;
+				position: absolute;
+				bottom: 0;
+				left: 0;
+				width: 100%;
+				padding: 20px 30px;
+				img {
+					height: 30px;
+					width: 30px;
+				}
+			}
+			.close {
+				display: none;
+			}
+		}
+		.main-section-container {
+			background-color: white;
+			width: 100%;
+			border-radius: 20px;
+			padding: 30px;
+			overflow: auto;
+			min-height: calc(100vh - 185px);
+
+			@media screen and (min-width: 605px) {
+				animation: slide-left 1.5s ease-in-out forwards;
+			}
+
+			.heading {
+				padding-bottom: 20px;
+				border-bottom: 4px solid $color-gray;
+			}
+			form {
+				input {
+					margin-top: 15px;
+					width: 100%;
+					padding: 15px 20px;
+					border-radius: 10px;
+					border: none;
+					outline: none;
+					background-color: $color-gray;
+					color: black;
+				}
+			}
+			.information {
+				max-width: 900px;
+				overflow: auto;
+				.full-screen-table {
+					th,
+					td {
+						img {
+							height: 30px;
+							width: 45px;
+						}
+						padding: 10px;
+						text-align: left;
+					}
+				}
+				.mobile-screen-table {
+					width: 100%;
+					display: none;
+
+					.mob-scr-tbl {
+						margin-top: 50px;
+					}
+					.logo-name-container {
+						text-align: right;
+						img {
+							height: 30px;
+							width: 45px;
+						}
+					}
+
+					.table-data-container {
+						width: 100%;
+						display: flex;
+						flex-direction: row;
+						justify-content: space-between;
+
+						ul {
+							list-style: none;
+							display: flex;
+							flex-direction: column;
+
+							li {
+								margin-top: 10px;
+							}
+						}
+						.data {
+							li {
+								text-align: right;
+							}
+						}
+					}
+				}
+				@media screen and (max-width: 850px) {
+					.full-screen-table {
+						display: none;
+					}
+					.mobile-screen-table {
+						display: block;
+					}
+				}
+			}
+		}
+		@media screen and (max-width: 605px) {
+			.sidebar-container {
+				position: absolute;
+				top: 0;
+				left: 0;
+				border-radius: 0;
+				z-index: 100;
+				height: 100%;
+				width: 100%;
+				transform: translateY(-100%);
+
+				ul {
+					width: 100%;
+					text-align: left;
+				}
+				.sidebar-social {
+					position: relative;
+					padding: 0;
+					margin-top: 100px;
+					max-width: 200px;
+				}
+				.close {
+					display: block;
+					position: absolute;
+					right: 0;
+					top: 40px;
+					padding: 10px;
+					background-color: rgba($color: #000000, $alpha: 0.3);
+					color: white;
+				}
+			}
+			.side-bar-show {
+				animation: slide-right 0.5s ease-in-out forwards;
+			}
+			.side-bar-hide {
+				animation: sidebar-slide-left 0.5s ease-in-out forwards;
+			}
+			@keyframes sidebar-slide-left {
+				from {
+					transform: translateX(0%);
+				}
+				to {
+					transform: translateX(-100%);
+				}
+			}
+		}
+	}
+	.main-navbar {
+		background-color: $primary-col;
+		width: calc(100% + 20px);
+		margin-bottom: 10px;
+		margin-top: -10px;
+		padding: 10px 20px;
+		margin-left: -10px;
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		img {
+			height: 20px;
+		}
+		.hamburger {
+			.fa-bars {
+				color: white;
+			}
+		}
+		display: none;
+		@media screen and (max-width: 605px) {
+			display: flex;
+		}
+	}
+	.sitemap {
+		background-color: $primary-col;
+		padding: 20px;
+		border-radius: 20px;
+		color: white;
+		margin-top: 20px;
+
+		@media screen and (min-width: 606px) {
+			animation: slide-up 1.5s ease-in-out forwards;
+		}
+
+		.sitemap-alllinks {
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+			margin-top: 20px;
+			a {
+				color: white;
+				font-size: 20px;
+				margin-right: 20px;
+			}
+			.sitemap-social {
+				img {
+					height: 30px;
+					width: 30px;
+					margin-left: 20px;
+				}
+			}
+			@media screen and (max-width: 605px) {
+				flex-direction: column;
+				gap: 20px;
+			}
+		}
+	}
+	@keyframes slide-right {
+		from {
+			transform: translateX(-100%);
+		}
+		to {
+			transform: translateX(0%);
+		}
+	}
+	@keyframes slide-left {
+		from {
+			transform: translateX(100%);
+		}
+		to {
+			transform: translateX(0);
+		}
+	}
+	@keyframes slide-up {
+		from {
+			transform: translateY(100%);
+		}
+		to {
+			transform: translateX(0);
+		}
+	}
+}
