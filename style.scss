@@ -149,6 +149,7 @@ body {
 	.analytics-container {
 		min-height: 100vh;
 		padding: 20px;
+		display: none;
 
 		.analytics-content {
 			padding: 20px;
@@ -318,5 +319,8 @@ body {
 				}
 			}
 		}
+	}
+	.show {
+		display: block;
 	}
 }

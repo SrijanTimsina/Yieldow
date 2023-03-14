@@ -23,6 +23,13 @@ document.querySelectorAll(".navbar").forEach((el) => {
 const chart = document.getElementById("chart");
 const activeUsers = document.getElementById("active-users");
 const bestTokens = document.getElementById("best-token");
+const analyticsBtn = document.getElementById("analytics-btn");
+const analyticsContainer = document.getElementById("analytics");
+
+analyticsBtn.addEventListener("click", () => {
+	analyticsContainer.classList.add("show");
+	analyticsContainer.scrollIntoView();
+});
 
 const barArray = [
 	20, 25, 50, 100, 20, 25, 50, 100, 20, 25, 50, 100, 20, 25, 50, 100,
