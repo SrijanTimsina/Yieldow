@@ -71,9 +71,13 @@ body a {
   padding: 20px 30px;
 }
 
-.container .main .sidebar-container .sidebar-social img {
-  height: 30px;
-  width: 30px;
+.container .main .sidebar-container .sidebar-social button {
+  cursor: pointer;
+  background-color: transparent;
+  border: 2px solid white;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 10px;
 }
 
 .container .main .sidebar-container .close {
