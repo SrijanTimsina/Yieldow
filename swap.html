@@ -7,7 +7,6 @@
 			name="viewport"
 			content="width=device-width, initial-scale=1.0"
 		/>
-
 		<title>Yieldow</title>
 		<link
 			rel="shortcut icon"
@@ -24,7 +23,7 @@
 		/>
 	</head>
 	<body>
-		<div class="container">
+		<div class="container" id="container">
 			<div class="main-navbar">
 				<a href="./index.html">
 					<img src="./images/logo.png" alt="Yieldow" />
@@ -61,102 +60,197 @@
 					<form action="">
 						<input type="text" placeholder="Search by pool name" />
 					</form>
-					<div class="information full-screen">
-						<table class="full-screen-table">
-							<thead>
-								<tr>
-									<th></th>
-									<th>Name</th>
-									<th>Liquidity</th>
-									<th>Weight</th>
-									<th>Staked</th>
-									<th>Reward</th>
-									<th>APR</th>
-								</tr>
-							</thead>
-							<tbody>
-								<tr>
-									<td>
+					<div class="information">
+						<div class="full-screen-table">
+							<div class="table-header">
+								<div class="row header">
+									<div class="cell"></div>
+									<div class="cell">Name</div>
+									<div class="cell">Liquidity</div>
+									<div class="cell">Weight</div>
+									<div class="cell">Staked</div>
+									<div class="cell">Reward</div>
+									<div class="cell">APR</div>
+								</div>
+							</div>
+							<div class="table-data">
+								<div class="row table-data-row">
+									<div class="cell image-cell">
 										<img src="./images/image.png" alt="" />
-									</td>
-									<td>ETH-USD</td>
-									<td>$1.000.000</td>
-									<td>5%</td>
-									<td>$500.000</td>
-									<td>300 ORN/Week</td>
-									<td>20%</td>
-								</tr>
-							</tbody>
-							<tbody>
-								<tr>
-									<td>
+									</div>
+									<div class="cell">ETH-USD</div>
+									<div class="cell">$1.000.000</div>
+									<div class="cell">5%</div>
+									<div class="cell">$500.000</div>
+									<div class="cell">300 ORN/Week</div>
+									<div class="cell">20%</div>
+								</div>
+								<div class="table-options">
+									<div class="option-links">
+										<p><a href=""> Pool Contract</a></p>
+										<p><a href="">First Token Contract</a></p>
+										<p><a href="">Second Token Contract</a></p>
+									</div>
+									<div class="option-buttons">
+										<div class="harvest-unstake">
+											<div class="harvest">
+												<p>Earnings</p>
+												<p>0.00</p>
+												<button>Harvest</button>
+											</div>
+											<div class="unstake">
+												<p>Unstake LP Tokens</p>
+												<p>0.00</p>
+												<button>Unstake</button>
+											</div>
+										</div>
+										<div class="stake">
+											<button class="popup-button">
+												STAKE LPs TOKENS AND EARN
+											</button>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="table-data">
+								<div class="row table-data-row">
+									<div class="cell image-cell">
 										<img src="./images/image.png" alt="" />
-									</td>
-									<td>ETH-USD</td>
-									<td>$1.000.000</td>
-									<td>5%</td>
-									<td>$500.000</td>
-									<td>300 ORN/Week</td>
-									<td>20%</td>
-								</tr>
-							</tbody>
-							<tbody>
-								<tr>
-									<td>
-										<img src="./images/image.png" alt="" />
-									</td>
-									<td>ETH-USD</td>
-									<td>$1.000.000</td>
-									<td>5%</td>
-									<td>$500.000</td>
-									<td>300 ORN/Week</td>
-									<td>20%</td>
-								</tr>
-							</tbody>
-						</table>
+									</div>
+									<div class="cell">ETH-USD</div>
+									<div class="cell">$1.000.000</div>
+									<div class="cell">5%</div>
+									<div class="cell">$500.000</div>
+									<div class="cell">300 ORN/Week</div>
+									<div class="cell">20%</div>
+								</div>
+								<div class="table-options">
+									<div class="option-links">
+										<p><a href=""> Pool Contract</a></p>
+										<p><a href="">First Token Contract</a></p>
+										<p><a href="">Second Token Contract</a></p>
+									</div>
+									<div class="option-buttons">
+										<div class="harvest-unstake">
+											<div class="harvest">
+												<p>Earnings</p>
+												<p>0.00</p>
+												<button>Harvest</button>
+											</div>
+											<div class="unstake">
+												<p>Unstake LP Tokens</p>
+												<p>0.00</p>
+												<button>Unstake</button>
+											</div>
+										</div>
+										<div class="stake">
+											<button class="popup-button">
+												STAKE LPs TOKENS AND EARN
+											</button>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
 						<div class="mobile-screen-table">
 							<div class="mob-scr-tbl">
-								<div class="logo-name-container">
-									<img src="./images/image.png" alt="" />
-									<p>ETH-USD</p>
+								<div class="mob-scr-tbl-data">
+									<div class="logo-name-container">
+										<img src="./images/image.png" alt="" />
+										<p>ETH-USD</p>
+									</div>
+									<div class="table-data-container">
+										<ul>
+											<li>Liquidity</li>
+											<li>Weight</li>
+											<li>Staked</li>
+											<li>Reward</li>
+											<li>APR</li>
+										</ul>
+										<ul class="data">
+											<li>$1.000.000</li>
+											<li>5%</li>
+											<li>$500.000</li>
+											<li>300 ORN/Week</li>
+											<li>20%</li>
+										</ul>
+									</div>
 								</div>
-								<div class="table-data-container">
-									<ul>
-										<li>Liquidity</li>
-										<li>Weight</li>
-										<li>Staked</li>
-										<li>Reward</li>
-										<li>APR</li>
-									</ul>
-									<ul class="data">
-										<li>$1.000.000</li>
-										<li>5%</li>
-										<li>$500.000</li>
-										<li>300 ORN/Week</li>
-										<li>20%</li>
-									</ul>
+								<div class="table-options">
+									<div class="option-links">
+										<p><a href=""> Pool Contract</a></p>
+										<p><a href="">First Token Contract</a></p>
+										<p><a href="">Second Token Contract</a></p>
+									</div>
+									<div class="option-buttons">
+										<div class="harvest-unstake">
+											<div class="harvest">
+												<p>Earnings</p>
+												<p>0.00</p>
+												<button>Harvest</button>
+											</div>
+											<div class="unstake">
+												<p>Unstake LP Tokens</p>
+												<p>0.00</p>
+												<button>Unstake</button>
+											</div>
+										</div>
+										<div class="stake">
+											<button class="popup-button">
+												STAKE LPs TOKENS AND EARN
+											</button>
+										</div>
+									</div>
 								</div>
 							</div>
 							<div class="mob-scr-tbl">
-								<div class="logo-name-container">
-									<img src="./images/image.png" alt="" />
-									<p>ETH-USD</p>
+								<div class="mob-scr-tbl-data">
+									<div class="logo-name-container">
+										<img src="./images/image.png" alt="" />
+										<p>ETH-USD</p>
+									</div>
+									<div class="table-data-container">
+										<ul>
+											<li>Liquidity</li>
+											<li>Weight</li>
+											<li>Staked</li>
+											<li>Reward</li>
+											<li>APR</li>
+										</ul>
+										<ul class="data">
+											<li>$1.000.000</li>
+											<li>5%</li>
+											<li>$500.000</li>
+											<li>300 ORN/Week</li>
+											<li>20%</li>
+										</ul>
+									</div>
 								</div>
-								<div class="table-data-container">
-									<ul>
-										<li>Liquidity</li>
-										<li>Weight</li>
-										<li>Staked</li>
-										<li>Reward</li>
-										<li>APR</li>
-									</ul>
-									<ul class="data">
-										<li>$1.000.000</li>
-										<li>5%</li>
-										<li>$500.000</li>
-										<li>300 ORN/Week</li>
-										<li>20%</li>
-									</ul>
+								<div class="table-options">
+									<div class="option-links">
+										<p><a href=""> Pool Contract</a></p>
+										<p><a href="">First Token Contract</a></p>
+										<p><a href="">Second Token Contract</a></p>
+									</div>
+									<div class="option-buttons">
+										<div class="harvest-unstake">
+											<div class="harvest">
+												<p>Earnings</p>
+												<p>0.00</p>
+												<button>Harvest</button>
+											</div>
+											<div class="unstake">
+												<p>Unstake LP Tokens</p>
+												<p>0.00</p>
+												<button>Unstake</button>
+											</div>
+										</div>
+										<div class="stake">
+											<button class="popup-button">
+												STAKE LPs TOKENS AND EARN
+											</button>
+										</div>
+									</div>
 								</div>
 							</div>
 						</div>
@@ -183,6 +277,28 @@
 							<img src="./images/icons8-github-32.png" alt="Github" />
 						</a>
 					</div>
+				</div>
+			</div>
+			<div class="stake-popup" id="stake-popup">
+				<div class="popup-content">
+					<h3 class="heading">
+						STAKE LPs TOKENS AND EARN
+						<p>
+							<i class="fa-solid fa-xmark" id="popup-close"></i>
+						</p>
+					</h3>
+					<div class="popup-info">
+						<div>
+							<p>Earnings</p>
+							<h2>0.00</h2>
+							<p>0.00 USD</p>
+						</div>
+						<div>
+							<p>Balance: 0</p>
+							<h2>ETH-USD</h2>
+						</div>
+					</div>
+					<button>STAKE AND EARN</button>
 				</div>
 			</div>
 		</div>

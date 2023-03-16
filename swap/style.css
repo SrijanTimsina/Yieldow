@@ -8,6 +8,7 @@
 
 body {
   font-family: "Kanit", sans-serif;
+  height: 100vh;
 }
 
 body a {
@@ -20,6 +21,90 @@ body a {
   background-color: #d6d5d5;
   min-height: 100vh;
   position: relative;
+}
+
+.container.popup-active .stake-popup {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.container .stake-popup {
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background-color: rgba(214, 213, 213, 0.5);
+  z-index: 1000;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  display: none;
+}
+
+.container .stake-popup .popup-content {
+  background-color: white;
+  width: 90%;
+  max-width: 430px;
+  padding: 30px;
+  border-radius: 40px;
+}
+
+.container .stake-popup .popup-content p {
+  cursor: pointer;
+}
+
+.container .stake-popup .popup-content .heading {
+  padding: 0 20px;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  gap: 15px;
+}
+
+@media screen and (max-width: 605px) {
+  .container .stake-popup .popup-content .heading {
+    font-size: 14px;
+  }
+}
+
+.container .stake-popup .popup-content .popup-info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 30px 20px;
+  background-color: #d6d5d5;
+  border-radius: 20px;
+  margin: 20px 0;
+  gap: 10px;
+}
+
+.container .stake-popup .popup-content button {
+  cursor: pointer;
+  background-color: #009051;
+  outline: none;
+  border: none;
+  color: white;
+  width: 100%;
+  padding: 15px;
+  border-radius: 7px;
 }
 
 .container .main {
@@ -89,9 +174,14 @@ body a {
   width: 100%;
   border-radius: 20px;
   padding: 30px;
-  min-height: calc(100vh - 185px);
   -webkit-animation: slide-left 1.5s ease-in-out forwards;
           animation: slide-left 1.5s ease-in-out forwards;
+}
+
+@media screen and (min-width: 606px) {
+  .container .main .main-section-container {
+    min-height: calc(100vh - 185px);
+  }
 }
 
 .container .main .main-section-container .heading {
@@ -115,16 +205,150 @@ body a {
   overflow: auto;
 }
 
-.container .main .main-section-container .information .full-screen-table th,
-.container .main .main-section-container .information .full-screen-table td {
+.container .main .main-section-container .information button {
+  cursor: pointer;
+  background-color: #009051;
+  outline: none;
+  border: none;
+  color: white;
+  width: 100%;
   padding: 10px;
-  text-align: left;
+  border-radius: 7px;
 }
 
-.container .main .main-section-container .information .full-screen-table th img,
-.container .main .main-section-container .information .full-screen-table td img {
+.container .main .main-section-container .information .full-screen-table {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.container .main .main-section-container .information .full-screen-table .row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 10px;
+}
+
+.container .main .main-section-container .information .full-screen-table .row.header {
+  font-weight: bold;
+}
+
+.container .main .main-section-container .information .full-screen-table .cell {
+  -ms-flex-preferred-size: 30%;
+      flex-basis: 30%;
+  margin-right: 10px;
+}
+
+.container .main .main-section-container .information .full-screen-table .table-data .table-data-row {
+  cursor: pointer;
+  margin-bottom: 5px;
+}
+
+.container .main .main-section-container .information .full-screen-table .table-data .table-data-row img {
   height: 30px;
   width: 45px;
+}
+
+.container .main .main-section-container .information .full-screen-table .table-data .table-data-row:hover {
+  background-color: rgba(214, 213, 213, 0.6);
+  border-radius: 7px;
+}
+
+.container .main .main-section-container .information .full-screen-table .table-data .table-options {
+  width: 100%;
+  max-width: 900px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  background-color: rgba(214, 213, 213, 0.6);
+  display: none;
+  border-radius: 10px;
+  overflow: hidden;
+  -webkit-animation: slide-down 0.5s ease-in-out forwards;
+          animation: slide-down 0.5s ease-in-out forwards;
+}
+
+@-webkit-keyframes slide-down {
+  from {
+    height: 10px;
+  }
+  to {
+    height: 200px;
+  }
+}
+
+@keyframes slide-down {
+  from {
+    height: 10px;
+  }
+  to {
+    height: 200px;
+  }
+}
+
+.container .main .main-section-container .information .full-screen-table .table-data .table-options .option-links {
+  width: 300px;
+  padding: 20px;
+}
+
+.container .main .main-section-container .information .full-screen-table .table-data .table-options .option-links p {
+  margin-bottom: 20px;
+}
+
+.container .main .main-section-container .information .full-screen-table .table-data .table-options .option-links p a {
+  color: black;
+  text-decoration: underline;
+}
+
+.container .main .main-section-container .information .full-screen-table .table-data .table-options .option-buttons {
+  width: 100%;
+  padding: 5px 10px;
+}
+
+.container .main .main-section-container .information .full-screen-table .table-data .table-options .option-buttons .harvest-unstake {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 10px;
+}
+
+.container .main .main-section-container .information .full-screen-table .table-data .table-options .option-buttons .harvest-unstake .harvest,
+.container .main .main-section-container .information .full-screen-table .table-data .table-options .option-buttons .harvest-unstake .unstake {
+  -ms-flex-preferred-size: 50%;
+      flex-basis: 50%;
+  background-color: #d6d5d5;
+  padding: 15px;
+  border-radius: 15px;
+}
+
+.container .main .main-section-container .information .full-screen-table .table-data .table-options .option-buttons .harvest-unstake .harvest p,
+.container .main .main-section-container .information .full-screen-table .table-data .table-options .option-buttons .harvest-unstake .unstake p {
+  margin-bottom: 10px;
+}
+
+.container .main .main-section-container .information .full-screen-table .table-data .table-options .option-buttons .stake {
+  margin: 10px 0;
+}
+
+.container .main .main-section-container .information .full-screen-table .table-data.show .table-options {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
 }
 
 .container .main .main-section-container .information .mobile-screen-table {
@@ -134,6 +358,95 @@ body a {
 
 .container .main .main-section-container .information .mobile-screen-table .mob-scr-tbl {
   margin-top: 50px;
+}
+
+.container .main .main-section-container .information .mobile-screen-table .mob-scr-tbl .table-options {
+  margin-top: 10px;
+  width: 100%;
+  max-width: 900px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  overflow: scroll;
+  background-color: rgba(214, 213, 213, 0.6);
+  display: none;
+  border-radius: 10px;
+  overflow: hidden;
+  -webkit-animation: slide-down-mbl 0.5s ease-in-out forwards;
+          animation: slide-down-mbl 0.5s ease-in-out forwards;
+}
+
+@-webkit-keyframes slide-down-mbl {
+  from {
+    height: 10px;
+  }
+  to {
+    height: 338px;
+  }
+}
+
+@keyframes slide-down-mbl {
+  from {
+    height: 10px;
+  }
+  to {
+    height: 338px;
+  }
+}
+
+.container .main .main-section-container .information .mobile-screen-table .mob-scr-tbl .table-options .option-links {
+  width: 300px;
+  padding: 20px 20px 0 20px;
+}
+
+.container .main .main-section-container .information .mobile-screen-table .mob-scr-tbl .table-options .option-links p {
+  margin-bottom: 20px;
+}
+
+.container .main .main-section-container .information .mobile-screen-table .mob-scr-tbl .table-options .option-links p a {
+  color: black;
+  text-decoration: underline;
+}
+
+.container .main .main-section-container .information .mobile-screen-table .mob-scr-tbl .table-options .option-buttons {
+  width: 100%;
+  padding: 5px 10px;
+}
+
+.container .main .main-section-container .information .mobile-screen-table .mob-scr-tbl .table-options .option-buttons .harvest-unstake {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 10px;
+}
+
+.container .main .main-section-container .information .mobile-screen-table .mob-scr-tbl .table-options .option-buttons .harvest-unstake .harvest,
+.container .main .main-section-container .information .mobile-screen-table .mob-scr-tbl .table-options .option-buttons .harvest-unstake .unstake {
+  -ms-flex-preferred-size: 50%;
+      flex-basis: 50%;
+  background-color: #d6d5d5;
+  padding: 15px;
+  border-radius: 15px;
+}
+
+.container .main .main-section-container .information .mobile-screen-table .mob-scr-tbl .table-options .option-buttons .harvest-unstake .harvest p,
+.container .main .main-section-container .information .mobile-screen-table .mob-scr-tbl .table-options .option-buttons .harvest-unstake .unstake p {
+  font-size: 12px;
+  margin-bottom: 10px;
+}
+
+.container .main .main-section-container .information .mobile-screen-table .mob-scr-tbl .table-options .option-buttons .stake {
+  margin: 10px 0;
+}
+
+.container .main .main-section-container .information .mobile-screen-table .mob-scr-tbl.show .table-options {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
 }
 
 .container .main .main-section-container .information .mobile-screen-table .logo-name-container {
@@ -291,7 +604,7 @@ body a {
   margin-top: 20px;
 }
 
-@media screen and (min-width: 605px) {
+@media screen and (min-width: 606px) {
   .container .sitemap {
     -webkit-animation: slide-up 1.5s ease-in-out forwards;
             animation: slide-up 1.5s ease-in-out forwards;
