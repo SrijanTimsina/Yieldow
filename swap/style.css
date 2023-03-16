@@ -285,19 +285,19 @@ body a {
 
 @-webkit-keyframes slide-down {
   from {
-    height: 10px;
+    max-height: 10px;
   }
   to {
-    height: 200px;
+    max-height: 250px;
   }
 }
 
 @keyframes slide-down {
   from {
-    height: 10px;
+    max-height: 10px;
   }
   to {
-    height: 200px;
+    max-height: 250px;
   }
 }
 
@@ -382,19 +382,19 @@ body a {
 
 @-webkit-keyframes slide-down-mbl {
   from {
-    height: 10px;
+    max-height: 10px;
   }
   to {
-    height: 338px;
+    max-height: 400px;
   }
 }
 
 @keyframes slide-down-mbl {
   from {
-    height: 10px;
+    max-height: 10px;
   }
   to {
-    height: 338px;
+    max-height: 400px;
   }
 }
 

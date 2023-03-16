@@ -222,10 +222,10 @@ body {
 
 							@keyframes slide-down {
 								from {
-									height: 10px;
+									max-height: 10px;
 								}
 								to {
-									height: 200px;
+									max-height: 250px;
 								}
 							}
 							.option-links {
@@ -292,10 +292,10 @@ body {
 
 							@keyframes slide-down-mbl {
 								from {
-									height: 10px;
+									max-height: 10px;
 								}
 								to {
-									height: 338px;
+									max-height: 400px;
 								}
 							}
 							.option-links {
