@@ -178,12 +178,10 @@ body button {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  cursor: pointer;
 }
 
-.container .stake-popup .popup-content .popup-content-container .add-plus-icon button {
-  width: -webkit-max-content;
-  width: -moz-max-content;
-  width: max-content;
+.container .stake-popup .popup-content .popup-content-container .add-plus-icon p {
   padding: 10px 25px;
   background-color: #d6d5d5;
   border-radius: 50%;

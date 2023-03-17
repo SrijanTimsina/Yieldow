@@ -128,9 +128,8 @@ body {
 					width: 100%;
 					display: flex;
 					justify-content: center;
-
-					button {
-						width: max-content;
+					cursor: pointer;
+					p {
 						padding: 10px 25px;
 						background-color: $color-gray;
 						border-radius: 50%;
