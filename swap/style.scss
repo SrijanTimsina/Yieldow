@@ -15,6 +15,9 @@ body {
 		text-decoration: none;
 		cursor: pointer;
 	}
+	button {
+		font-family: "Kanit", sans-serif;
+	}
 }
 
 .container {
@@ -25,7 +28,18 @@ body {
 
 	&.popup-active {
 		.stake-popup {
+			z-index: 100;
 			display: flex;
+			animation: fade-in 1s forwards;
+
+			@keyframes fade-in {
+				from {
+					opacity: 0;
+				}
+				to {
+					opacity: 1;
+				}
+			}
 		}
 	}
 	.stake-popup {
@@ -40,6 +54,7 @@ body {
 		justify-content: center;
 		align-items: center;
 		display: none;
+
 		.popup-content {
 			background-color: white;
 			width: 90%;
@@ -61,6 +76,21 @@ body {
 					font-size: 14px;
 				}
 			}
+			input {
+				background-color: transparent;
+				outline: 0;
+				border: 0;
+				margin: 15px 0;
+				font-size: 16px;
+
+				&::-webkit-outer-spin-button,
+				&::-webkit-inner-spin-button {
+					-webkit-appearance: none;
+				}
+			}
+			input[type="number"] {
+				-moz-appearance: textfield;
+			}
 			.popup-info {
 				display: flex;
 				justify-content: space-between;
@@ -79,6 +109,7 @@ body {
 				width: 100%;
 				padding: 15px;
 				border-radius: 7px;
+				font-family: "Kanit", sans-serif;
 			}
 		}
 	}
@@ -145,7 +176,7 @@ body {
 				padding-bottom: 20px;
 				border-bottom: 4px solid $color-gray;
 			}
-			form {
+			.search-form {
 				input {
 					margin-top: 15px;
 					width: 100%;
@@ -206,65 +237,109 @@ body {
 								border-radius: 7px;
 							}
 						}
-						.table-options {
-							width: 100%;
-							max-width: 900px;
-							display: flex;
-							justify-content: space-between;
-							background-color: rgba(
-								$color: $color-gray,
-								$alpha: 0.6
-							);
-							display: none;
-							border-radius: 10px;
-							overflow: hidden;
-							animation: slide-down 0.5s ease-in-out forwards;
-
-							@keyframes slide-down {
-								from {
-									max-height: 10px;
-								}
-								to {
-									max-height: 250px;
-								}
-							}
-							.option-links {
-								width: 300px;
-								padding: 20px;
-
-								p {
-									margin-bottom: 20px;
-									a {
-										color: black;
-										text-decoration: underline;
-									}
-								}
-							}
-							.option-buttons {
-								width: 100%;
-								padding: 5px 10px;
-								.harvest-unstake {
-									display: flex;
-									gap: 10px;
-									.harvest,
-									.unstake {
-										flex-basis: 50%;
-										background-color: $color-gray;
-										padding: 15px;
-										border-radius: 15px;
-										p {
-											margin-bottom: 10px;
-										}
-									}
-								}
-								.stake {
-									margin: 10px 0;
-								}
-							}
-						}
 						&.show {
 							.table-options {
 								display: flex;
+							}
+						}
+					}
+				}
+				.table-options {
+					width: 100%;
+					max-width: 900px;
+					display: flex;
+					justify-content: space-between;
+					background-color: rgba($color: $color-gray, $alpha: 0.6);
+					display: none;
+					border-radius: 10px;
+					overflow: hidden;
+					animation: slide-down 0.5s ease-in-out forwards;
+
+					@keyframes slide-down {
+						from {
+							max-height: 0px;
+						}
+						to {
+							max-height: 400px;
+						}
+					}
+					.option-links {
+						width: 300px;
+						padding: 20px;
+
+						p {
+							margin-bottom: 20px;
+							a {
+								color: black;
+								text-decoration: underline;
+							}
+						}
+					}
+					.option-buttons {
+						width: 100%;
+						padding: 5px 10px;
+						.harvest-unstake {
+							display: flex;
+							gap: 10px;
+							.harvest,
+							.unstake {
+								flex-basis: 50%;
+								background-color: $color-gray;
+								padding: 15px;
+								border-radius: 15px;
+
+								input {
+									background-color: transparent;
+									outline: 0;
+									border: 0;
+									margin: 15px 0;
+									font-size: 16px;
+									appearance: none;
+									width: 100%;
+
+									&::-webkit-outer-spin-button,
+									&::-webkit-inner-spin-button {
+										-webkit-appearance: none;
+									}
+								}
+								input[type="number"] {
+									-moz-appearance: textfield;
+								}
+								@media screen and (max-width: 650px) {
+									p {
+										font-size: 14px;
+									}
+								}
+								@media screen and (max-width: 404px) {
+									p {
+										font-size: 12px;
+									}
+								}
+								@media screen and (max-width: 370px) {
+									p {
+										font-size: 10px;
+									}
+								}
+							}
+						}
+						.stake {
+							margin: 10px 0;
+						}
+					}
+					@media screen and (max-width: 950px) {
+						flex-direction: column;
+
+						.option-links {
+							padding: 20px 20px 0 20px;
+						}
+					}
+					@media screen and (max-width: 650px) {
+						.harvest,
+						.unstake {
+							padding: 15px 5px;
+							p {
+								// font-size: 12px;
+								margin-bottom: 10px;
 							}
 						}
 					}
@@ -274,65 +349,6 @@ body {
 					display: none;
 					.mob-scr-tbl {
 						margin-top: 50px;
-						.table-options {
-							margin-top: 10px;
-							width: 100%;
-							max-width: 900px;
-							display: flex;
-							flex-direction: column;
-							overflow: scroll;
-							background-color: rgba(
-								$color: $color-gray,
-								$alpha: 0.6
-							);
-							display: none;
-							border-radius: 10px;
-							overflow: hidden;
-							animation: slide-down-mbl 0.5s ease-in-out forwards;
-
-							@keyframes slide-down-mbl {
-								from {
-									max-height: 10px;
-								}
-								to {
-									max-height: 400px;
-								}
-							}
-							.option-links {
-								width: 300px;
-								padding: 20px 20px 0 20px;
-
-								p {
-									margin-bottom: 20px;
-									a {
-										color: black;
-										text-decoration: underline;
-									}
-								}
-							}
-							.option-buttons {
-								width: 100%;
-								padding: 5px 10px;
-								.harvest-unstake {
-									display: flex;
-									gap: 10px;
-									.harvest,
-									.unstake {
-										flex-basis: 50%;
-										background-color: $color-gray;
-										padding: 15px;
-										border-radius: 15px;
-										p {
-											font-size: 12px;
-											margin-bottom: 10px;
-										}
-									}
-								}
-								.stake {
-									margin: 10px 0;
-								}
-							}
-						}
 						&.show {
 							.table-options {
 								display: flex;

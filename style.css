@@ -136,6 +136,8 @@ body .container {
   background-color: red;
   border-radius: 15px;
   outline: none;
+  -webkit-transition: background 1s;
+  transition: background 1s;
 }
 
 .bg-container .home-container .main-section .buttons .app-btn,
