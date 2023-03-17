@@ -170,6 +170,27 @@ body button {
   padding: 5px 15px;
 }
 
+.container .stake-popup .popup-content .popup-content-container .add-plus-icon {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.container .stake-popup .popup-content .popup-content-container .add-plus-icon button {
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+  padding: 10px 25px;
+  background-color: #d6d5d5;
+  border-radius: 50%;
+  font-size: 30px;
+  color: black;
+}
+
 .container .stake-popup .popup-content input {
   background-color: transparent;
   outline: 0;
@@ -356,148 +377,6 @@ body button {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-}
-
-.container .main .main-section-container .information .table-options {
-  width: 100%;
-  max-width: 1100px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  background-color: rgba(214, 213, 213, 0.6);
-  display: none;
-  border-radius: 10px;
-  overflow: hidden;
-  -webkit-animation: slide-down 0.5s ease-in-out forwards;
-          animation: slide-down 0.5s ease-in-out forwards;
-}
-
-@-webkit-keyframes slide-down {
-  from {
-    max-height: 0px;
-  }
-  to {
-    max-height: 400px;
-  }
-}
-
-@keyframes slide-down {
-  from {
-    max-height: 0px;
-  }
-  to {
-    max-height: 400px;
-  }
-}
-
-.container .main .main-section-container .information .table-options .option-links {
-  width: 300px;
-  padding: 20px;
-}
-
-.container .main .main-section-container .information .table-options .option-links p {
-  margin-bottom: 20px;
-}
-
-.container .main .main-section-container .information .table-options .option-links p a {
-  color: black;
-  text-decoration: underline;
-}
-
-.container .main .main-section-container .information .table-options .option-buttons {
-  width: 100%;
-  padding: 5px 10px;
-}
-
-.container .main .main-section-container .information .table-options .option-buttons .harvest-unstake {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  gap: 10px;
-}
-
-.container .main .main-section-container .information .table-options .option-buttons .harvest-unstake .harvest,
-.container .main .main-section-container .information .table-options .option-buttons .harvest-unstake .unstake {
-  -ms-flex-preferred-size: 50%;
-      flex-basis: 50%;
-  background-color: #d6d5d5;
-  padding: 15px;
-  border-radius: 15px;
-}
-
-.container .main .main-section-container .information .table-options .option-buttons .harvest-unstake .harvest input,
-.container .main .main-section-container .information .table-options .option-buttons .harvest-unstake .unstake input {
-  background-color: transparent;
-  outline: 0;
-  border: 0;
-  margin: 15px 0;
-  font-size: 16px;
-  -webkit-appearance: none;
-     -moz-appearance: none;
-          appearance: none;
-  width: 100%;
-}
-
-.container .main .main-section-container .information .table-options .option-buttons .harvest-unstake .harvest input::-webkit-outer-spin-button, .container .main .main-section-container .information .table-options .option-buttons .harvest-unstake .harvest input::-webkit-inner-spin-button,
-.container .main .main-section-container .information .table-options .option-buttons .harvest-unstake .unstake input::-webkit-outer-spin-button,
-.container .main .main-section-container .information .table-options .option-buttons .harvest-unstake .unstake input::-webkit-inner-spin-button {
-  -webkit-appearance: none;
-}
-
-.container .main .main-section-container .information .table-options .option-buttons .harvest-unstake .harvest input[type="number"],
-.container .main .main-section-container .information .table-options .option-buttons .harvest-unstake .unstake input[type="number"] {
-  -moz-appearance: textfield;
-}
-
-@media screen and (max-width: 650px) {
-  .container .main .main-section-container .information .table-options .option-buttons .harvest-unstake .harvest p,
-  .container .main .main-section-container .information .table-options .option-buttons .harvest-unstake .unstake p {
-    font-size: 14px;
-  }
-}
-
-@media screen and (max-width: 404px) {
-  .container .main .main-section-container .information .table-options .option-buttons .harvest-unstake .harvest p,
-  .container .main .main-section-container .information .table-options .option-buttons .harvest-unstake .unstake p {
-    font-size: 12px;
-  }
-}
-
-@media screen and (max-width: 370px) {
-  .container .main .main-section-container .information .table-options .option-buttons .harvest-unstake .harvest p,
-  .container .main .main-section-container .information .table-options .option-buttons .harvest-unstake .unstake p {
-    font-size: 10px;
-  }
-}
-
-.container .main .main-section-container .information .table-options .option-buttons .stake {
-  margin: 10px 0;
-}
-
-@media screen and (max-width: 950px) {
-  .container .main .main-section-container .information .table-options {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-  }
-  .container .main .main-section-container .information .table-options .option-links {
-    padding: 20px 20px 0 20px;
-  }
-}
-
-@media screen and (max-width: 650px) {
-  .container .main .main-section-container .information .table-options .harvest,
-  .container .main .main-section-container .information .table-options .unstake {
-    padding: 15px 5px;
-  }
-  .container .main .main-section-container .information .table-options .harvest p,
-  .container .main .main-section-container .information .table-options .unstake p {
-    margin-bottom: 10px;
-  }
 }
 
 .container .main .main-section-container .information .mobile-screen-table {
