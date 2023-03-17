@@ -60,7 +60,7 @@ body button {
   left: 0;
   bottom: 0;
   right: 0;
-  background-color: rgba(214, 213, 213, 0.5);
+  background-color: rgba(214, 213, 213, 0.9);
   z-index: 1000;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -77,34 +77,97 @@ body button {
 .container .stake-popup .popup-content {
   background-color: white;
   width: 90%;
-  max-width: 430px;
+  max-width: 600px;
   padding: 30px;
-  border-radius: 40px;
+  border-radius: 20px;
+  overflow: auto;
+  max-height: 80vh;
+  position: relative;
 }
 
-.container .stake-popup .popup-content p {
-  cursor: pointer;
+.container .stake-popup .popup-content .popup-content-container {
+  display: none;
 }
 
-.container .stake-popup .popup-content .heading {
-  padding: 0 20px;
-  width: 100%;
+.container .stake-popup .popup-content .popup-content-container.active {
+  display: block;
+}
+
+.container .stake-popup .popup-content .popup-content-container ul {
+  list-style: none;
+  margin: 30px 0;
+}
+
+.container .stake-popup .popup-content .popup-content-container ul li {
+  margin-bottom: 10px;
+}
+
+.container .stake-popup .popup-content .popup-content-container ul .space-apart {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  gap: 15px;
+  gap: 20px;
 }
 
-@media screen and (max-width: 605px) {
-  .container .stake-popup .popup-content .heading {
-    font-size: 14px;
-  }
+.container .stake-popup .popup-content .popup-content-container ul .space-apart p {
+  width: 50%;
+}
+
+.container .stake-popup .popup-content .popup-content-container .heading {
+  width: 100%;
+  margin-bottom: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  gap: 10px;
+}
+
+.container .stake-popup .popup-content .popup-content-container .heading .back-btn {
+  cursor: pointer;
+}
+
+.container .stake-popup .popup-content .popup-content-container .sub-heading {
+  width: 100%;
+  text-align: center;
+}
+
+.container .stake-popup .popup-content .popup-content-container button {
+  margin-bottom: 10px;
+}
+
+.container .stake-popup .popup-content .popup-content-container .btn-gray {
+  background-color: #d6d5d5;
+}
+
+.container .stake-popup .popup-content .popup-content-container .end-btn {
+  margin-top: 20px;
+}
+
+.container .stake-popup .popup-content .popup-content-container .popup-info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 30px 20px;
+  background-color: #d6d5d5;
+  border-radius: 20px;
+  margin: 20px 0;
+  gap: 10px;
+}
+
+.container .stake-popup .popup-content .popup-content-container.stake-liquidity .stake-info {
+  padding: 5px 15px;
 }
 
 .container .stake-popup .popup-content input {
@@ -121,20 +184,6 @@ body button {
 
 .container .stake-popup .popup-content input[type="number"] {
   -moz-appearance: textfield;
-}
-
-.container .stake-popup .popup-content .popup-info {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  padding: 30px 20px;
-  background-color: #d6d5d5;
-  border-radius: 20px;
-  margin: 20px 0;
-  gap: 10px;
 }
 
 .container .stake-popup .popup-content button {
@@ -218,12 +267,7 @@ body button {
   padding: 30px;
   -webkit-animation: slide-left 1.5s ease-in-out forwards;
           animation: slide-left 1.5s ease-in-out forwards;
-}
-
-@media screen and (min-width: 606px) {
-  .container .main .main-section-container {
-    min-height: calc(100vh - 185px);
-  }
+  min-height: calc(100vh - 20px);
 }
 
 .container .main .main-section-container .heading {
@@ -243,7 +287,7 @@ body button {
 }
 
 .container .main .main-section-container .information {
-  max-width: 900px;
+  max-width: 1100px;
   overflow: auto;
 }
 
@@ -316,7 +360,7 @@ body button {
 
 .container .main .main-section-container .information .table-options {
   width: 100%;
-  max-width: 900px;
+  max-width: 1100px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -513,7 +557,7 @@ body button {
   text-align: right;
 }
 
-@media screen and (max-width: 850px) {
+@media screen and (max-width: 1050px) {
   .container .main .main-section-container .information .full-screen-table {
     display: none;
   }
@@ -615,56 +659,6 @@ body button {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-  }
-}
-
-.container .sitemap {
-  background-color: #009051;
-  padding: 20px;
-  border-radius: 20px;
-  color: white;
-  margin-top: 20px;
-}
-
-@media screen and (min-width: 606px) {
-  .container .sitemap {
-    -webkit-animation: slide-up 1.5s ease-in-out forwards;
-            animation: slide-up 1.5s ease-in-out forwards;
-  }
-}
-
-.container .sitemap .sitemap-alllinks {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  margin-top: 20px;
-}
-
-.container .sitemap .sitemap-alllinks a {
-  color: white;
-  font-size: 20px;
-  margin-right: 20px;
-}
-
-.container .sitemap .sitemap-alllinks .sitemap-social img {
-  height: 30px;
-  width: 30px;
-  margin-left: 20px;
-}
-
-@media screen and (max-width: 605px) {
-  .container .sitemap .sitemap-alllinks {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    gap: 20px;
   }
 }
 

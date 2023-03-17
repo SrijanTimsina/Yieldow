@@ -71,6 +71,8 @@
 									<div class="cell">Staked</div>
 									<div class="cell">Reward</div>
 									<div class="cell">APR</div>
+									<div class="cell">Reward period finish</div>
+									<div class="cell">Your liquidity</div>
 								</div>
 							</div>
 							<div class="table-data">
@@ -84,8 +86,10 @@
 									<div class="cell">$500.000</div>
 									<div class="cell">300 ORN/Week</div>
 									<div class="cell">20%</div>
+									<div class="cell">-</div>
+									<div class="cell">-</div>
 								</div>
-								<div class="table-options">
+								<!-- <div class="table-options">
 									<div class="option-links">
 										<p><a href=""> Pool Contract</a></p>
 										<p><a href="">First Token Contract</a></p>
@@ -114,7 +118,7 @@
 											</button>
 										</div>
 									</div>
-								</div>
+								</div> -->
 							</div>
 							<div class="table-data">
 								<div class="row table-data-row">
@@ -127,8 +131,10 @@
 									<div class="cell">$500.000</div>
 									<div class="cell">300 ORN/Week</div>
 									<div class="cell">20%</div>
+									<div class="cell">-</div>
+									<div class="cell">-</div>
 								</div>
-								<div class="table-options">
+								<!-- <div class="table-options">
 									<div class="option-links">
 										<p><a href=""> Pool Contract</a></p>
 										<p><a href="">First Token Contract</a></p>
@@ -157,7 +163,7 @@
 											</button>
 										</div>
 									</div>
-								</div>
+								</div> -->
 							</div>
 						</div>
 						<div class="mobile-screen-table">
@@ -184,7 +190,7 @@
 										</ul>
 									</div>
 								</div>
-								<div class="table-options">
+								<!-- <div class="table-options">
 									<div class="option-links">
 										<p><a href=""> Pool Contract</a></p>
 										<p><a href="">First Token Contract</a></p>
@@ -213,7 +219,7 @@
 											</button>
 										</div>
 									</div>
-								</div>
+								</div> -->
 							</div>
 							<div class="mob-scr-tbl">
 								<div class="mob-scr-tbl-data">
@@ -238,7 +244,7 @@
 										</ul>
 									</div>
 								</div>
-								<div class="table-options">
+								<!-- <div class="table-options">
 									<div class="option-links">
 										<p><a href=""> Pool Contract</a></p>
 										<p><a href="">First Token Contract</a></p>
@@ -267,56 +273,199 @@
 											</button>
 										</div>
 									</div>
-								</div>
+								</div> -->
 							</div>
 						</div>
-					</div>
-				</div>
-			</div>
-
-			<div class="sitemap">
-				<h1>Sitemap</h1>
-				<div class="sitemap-alllinks">
-					<div class="sitemap-links">
-						<a href="./index.html">Home</a>
-						<a href="#">dApp</a>
-						<a href="./index.html#analytics">Analytics</a>
-					</div>
-					<div class="sitemap-social">
-						<a href="">
-							<img src="./images/discord.png" alt="Discord" />
-						</a>
-						<a href="">
-							<img src="./images/twitter.png" alt="Twitter" />
-						</a>
-						<a href="">
-							<img src="./images/icons8-github-32.png" alt="Github" />
-						</a>
 					</div>
 				</div>
 			</div>
 			<div class="stake-popup" id="stake-popup">
 				<div class="popup-content">
-					<h3 class="heading">
-						STAKE LPs TOKENS AND EARN
-						<p>
-							<i class="fa-solid fa-xmark" id="popup-close"></i>
-						</p>
-					</h3>
-					<form action="">
-						<div class="popup-info">
-							<div>
-								<p>Earnings</p>
-								<input type="number" placeholder="0.00" />
-								<p>0.00 USD</p>
-							</div>
-							<div>
-								<p>Balance: 0</p>
-								<h2>ETH-USD</h2>
-							</div>
+					<div
+						class="popup-content-container basic-data active"
+						id="basic-data"
+					>
+						<h1 class="heading">
+							<p class="back-btn" id="popup-close">
+								<i class="fa-solid fa-left-long"></i>
+							</p>
+							ETH-USD
+							<p></p>
+						</h1>
+						<div>
+							<ul>
+								<li class="space-apart">
+									<p>Total pooled ETH</p>
+									<p>100</p>
+								</li>
+								<li class="space-apart">
+									<p>Total pooled USDC</p>
+									<p>180000</p>
+								</li>
+								<li class="space-apart">
+									<p>Liquidity</p>
+									<p>180000$</p>
+								</li>
+								<li class="space-apart">
+									<p>Price</p>
+									<p>1ETH = 1800 USDC</p>
+								</li>
+								<li class="space-apart">
+									<p>Your pooled BNB</p>
+									<p>Connect your wallet</p>
+								</li>
+								<li class="space-apart">
+									<p>Your pooled ORN</p>
+									<p>Connect your wallet</p>
+								</li>
+								<li class="space-apart">
+									<p>Your pool share</p>
+									<p>Connect your wallet</p>
+								</li>
+							</ul>
 						</div>
-						<button>STAKE AND EARN</button>
-					</form>
+						<button class="btn-green" id="btn-add">
+							ADD LIQUIDITY
+						</button>
+						<button class="btn-gray" id="btn-remove">
+							REMOVE LIQUIDITY
+						</button>
+						<div>
+							<ul>
+								<li class="space-apart">
+									<p>Your unstaked LP</p>
+									<p>Your unstaked LP</p>
+								</li>
+								<li class="space-apart">
+									<p>Your staked LP</p>
+									<p>Your staked LP</p>
+								</li>
+								<li class="space-apart">
+									<p>Your earned</p>
+									<p>Your earned</p>
+								</li>
+								<li class="space-apart">
+									<p>Your reward rate</p>
+									<p>Your reward rate</p>
+								</li>
+								<li class="space-apart">
+									<p>Total staked</p>
+									<p>Total staked</p>
+								</li>
+								<li class="space-apart">
+									<p>Reward</p>
+									<p>Reward</p>
+								</li>
+								<li class="space-apart">
+									<p>Rate</p>
+									<p>Rate</p>
+								</li>
+							</ul>
+						</div>
+						<button class="btn-green" id="btn-stake">
+							STAKE LP AND EARN
+						</button>
+						<button class="btn-green" id="btn-claim">
+							CLAIM REWARDS
+						</button>
+						<button class="btn-gray" id="btn-unstake">UNSTAKE</button>
+					</div>
+					<div
+						class="popup-content-container add-liquidity"
+						id="add-liquidity"
+					>
+						<h1 class="heading">
+							<p class="back-btn back-basic">
+								<i class="fa-solid fa-left-long"></i>
+							</p>
+							Add liquidity to ETH-USD
+							<p></p>
+						</h1>
+						<form action="">
+							<div class="popup-info">
+								<div>
+									<input type="number" placeholder="0.00" />
+								</div>
+								<div>
+									<p>Balance: 0.000</p>
+									<h2>ETH-USD</h2>
+								</div>
+							</div>
+
+							<div class="popup-info">
+								<div>
+									<input type="number" placeholder="0.00" />
+								</div>
+								<div>
+									<p>Balance: 0.000</p>
+									<h2>ETH-USD</h2>
+								</div>
+							</div>
+							<button class="end-btn">ADD LIQUIDITY</button>
+						</form>
+					</div>
+					<div
+						class="popup-content-container remove-liquidity"
+						id="remove-liquidity"
+					>
+						<h1 class="heading">
+							<p class="back-btn back-basic">
+								<i class="fa-solid fa-left-long"></i>
+							</p>
+							Remove Liquidity ETH-USD
+							<p></p>
+						</h1>
+						<h2 class="sub-heading">
+							Are you sure you want to remove liquidity?
+						</h2>
+						<button class="end-btn">UNSTAKE LP</button>
+					</div>
+					<div
+						class="popup-content-container stake-liquidity"
+						id="stake-liquidity"
+					>
+						<h1 class="heading">
+							<p class="back-btn back-basic">
+								<i class="fa-solid fa-left-long"></i>
+							</p>
+							Stake
+							<p></p>
+						</h1>
+						<p>Amount</p>
+						<form action="">
+							<div class="popup-info stake-info">
+								<input type="number" placeholder="0.00" />
+								<h3>LP</h3>
+							</div>
+							<ul>
+								<li class="space-apart">
+									<p>Available</p>
+									<p style="text-align: right">0.00000 LP</p>
+								</li>
+								<li class="space-apart">
+									<p>Network Fee</p>
+									<p style="text-align: right">0.0000 ETH</p>
+								</li>
+							</ul>
+							<button>CLAIM REWARDS</button>
+						</form>
+					</div>
+					<div
+						class="popup-content-container unstake-liquidity"
+						id="unstake-liquidity"
+					>
+						<h1 class="heading">
+							<p class="back-btn back-basic">
+								<i class="fa-solid fa-left-long"></i>
+							</p>
+							Unstake ETH-USD LPs
+							<p></p>
+						</h1>
+						<h2 class="sub-heading">
+							Are you sure you want to unstake LPs tokena?
+						</h2>
+						<button class="end-btn">UNSTAKE LP</button>
+					</div>
 				</div>
 			</div>
 		</div>

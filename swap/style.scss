@@ -48,7 +48,7 @@ body {
 		left: 0;
 		bottom: 0;
 		right: 0;
-		background-color: rgba($color: $color-gray, $alpha: 0.5);
+		background-color: rgba($color: $color-gray, $alpha: 0.9);
 		z-index: 1000;
 		display: flex;
 		justify-content: center;
@@ -58,24 +58,80 @@ body {
 		.popup-content {
 			background-color: white;
 			width: 90%;
-			max-width: 430px;
+			max-width: 600px;
 			padding: 30px;
-			border-radius: 40px;
+			border-radius: 20px;
+			overflow: auto;
+			max-height: 80vh;
+			position: relative;
 
-			p {
-				cursor: pointer;
-			}
-			.heading {
-				padding: 0 20px;
-				width: 100%;
-				display: flex;
-				align-items: center;
-				justify-content: space-between;
-				gap: 15px;
-				@media screen and (max-width: 605px) {
-					font-size: 14px;
+			// .back-btn {
+			// 	position: absolute;
+			// 	font-size: 30px;
+			// 	cursor: pointer;
+			// }
+
+			.popup-content-container {
+				display: none;
+				&.active {
+					display: block;
+				}
+				ul {
+					list-style: none;
+					margin: 30px 0;
+
+					li {
+						margin-bottom: 10px;
+					}
+					.space-apart {
+						display: flex;
+						justify-content: space-between;
+						gap: 20px;
+						p {
+							width: 50%;
+						}
+					}
+				}
+				.heading {
+					width: 100%;
+					margin-bottom: 20px;
+					display: flex;
+					justify-content: space-between;
+					gap: 10px;
+					.back-btn {
+						cursor: pointer;
+					}
+				}
+				.sub-heading {
+					width: 100%;
+					text-align: center;
+				}
+				button {
+					margin-bottom: 10px;
+				}
+				.btn-gray {
+					background-color: $color-gray;
+				}
+				.end-btn {
+					margin-top: 20px;
+				}
+				.popup-info {
+					display: flex;
+					justify-content: space-between;
+					align-items: center;
+					padding: 30px 20px;
+					background-color: $color-gray;
+					border-radius: 20px;
+					margin: 20px 0;
+					gap: 10px;
+				}
+				&.stake-liquidity {
+					.stake-info {
+						padding: 5px 15px;
+					}
 				}
 			}
+
 			input {
 				background-color: transparent;
 				outline: 0;
@@ -91,15 +147,7 @@ body {
 			input[type="number"] {
 				-moz-appearance: textfield;
 			}
-			.popup-info {
-				display: flex;
-				justify-content: space-between;
-				padding: 30px 20px;
-				background-color: $color-gray;
-				border-radius: 20px;
-				margin: 20px 0;
-				gap: 10px;
-			}
+
 			button {
 				cursor: pointer;
 				background-color: $primary-col;
@@ -168,9 +216,7 @@ body {
 			border-radius: 20px;
 			padding: 30px;
 			animation: slide-left 1.5s ease-in-out forwards;
-			@media screen and (min-width: 606px) {
-				min-height: calc(100vh - 185px);
-			}
+			min-height: calc(100vh - 20px);
 
 			.heading {
 				padding-bottom: 20px;
@@ -189,7 +235,7 @@ body {
 				}
 			}
 			.information {
-				max-width: 900px;
+				max-width: 1100px;
 				overflow: auto;
 				button {
 					cursor: pointer;
@@ -246,7 +292,7 @@ body {
 				}
 				.table-options {
 					width: 100%;
-					max-width: 900px;
+					max-width: 1100px;
 					display: flex;
 					justify-content: space-between;
 					background-color: rgba($color: $color-gray, $alpha: 0.6);
@@ -385,7 +431,7 @@ body {
 						}
 					}
 				}
-				@media screen and (max-width: 850px) {
+				@media screen and (max-width: 1050px) {
 					.full-screen-table {
 						display: none;
 					}
@@ -465,40 +511,7 @@ body {
 			display: flex;
 		}
 	}
-	.sitemap {
-		background-color: $primary-col;
-		padding: 20px;
-		border-radius: 20px;
-		color: white;
-		margin-top: 20px;
 
-		@media screen and (min-width: 606px) {
-			animation: slide-up 1.5s ease-in-out forwards;
-		}
-
-		.sitemap-alllinks {
-			display: flex;
-			justify-content: space-between;
-			align-items: center;
-			margin-top: 20px;
-			a {
-				color: white;
-				font-size: 20px;
-				margin-right: 20px;
-			}
-			.sitemap-social {
-				img {
-					height: 30px;
-					width: 30px;
-					margin-left: 20px;
-				}
-			}
-			@media screen and (max-width: 605px) {
-				flex-direction: column;
-				gap: 20px;
-			}
-		}
-	}
 	@keyframes slide-right {
 		from {
 			transform: translateX(-100%);
