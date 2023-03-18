@@ -1,5 +1,3 @@
-// const tableData = document.querySelectorAll(".table-data");
-// const mobileTable = document.querySelectorAll(".mob-scr-tbl");
 const dataRow = document.querySelectorAll(".table-data-row");
 const mobileData = document.querySelectorAll(".mob-scr-tbl-data");
 const popupButton = document.querySelectorAll(".popup-button");
@@ -22,15 +20,6 @@ const backBasicBtn = document.querySelectorAll(".back-basic");
 const popupContainers = document.querySelectorAll(
 	".popup-content-container"
 );
-// const tableOptionsToggle = (el, parent) => {
-// 	let parentNode = el.parentNode;
-// 	if (parentNode.classList.contains("show")) {
-// 		parentNode.classList.remove("show");
-// 		return;
-// 	}
-// 	parent.forEach((el) => el.classList.remove("show"));
-// 	parentNode.classList.add("show");
-// };
 
 const popupToggle = () => container.classList.toggle("popup-active");
 
@@ -43,16 +32,6 @@ document.getElementById("close").addEventListener("click", () => {
 	sidebarContainer.classList.add("side-bar-hide");
 });
 
-// mobileData.forEach((el) =>
-// 	el.addEventListener("click", () => {
-// 		tableOptionsToggle(el, mobileTable);
-// 	})
-// );
-// dataRow.forEach((el) =>
-// 	el.addEventListener("click", () => {
-// 		tableOptionsToggle(el, tableData);
-// 	})
-// );
 backBasicBtn.forEach((el) =>
 	el.addEventListener("click", () => {
 		popupContainers.forEach((el) => el.classList.remove("active"));
