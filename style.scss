@@ -26,7 +26,12 @@ body {
 	background-size: cover;
 	background-repeat: no-repeat;
 	margin: auto;
-	max-width: 1000px;
+
+	.home-container,
+	.analytics-container {
+		max-width: 1000px;
+		margin: 0 auto;
+	}
 
 	.navbar {
 		background-color: $primary-col;

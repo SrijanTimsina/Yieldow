@@ -25,7 +25,12 @@ body .container {
   background-size: cover;
   background-repeat: no-repeat;
   margin: auto;
+}
+
+.bg-container .home-container,
+.bg-container .analytics-container {
   max-width: 1000px;
+  margin: 0 auto;
 }
 
 .bg-container .navbar {
