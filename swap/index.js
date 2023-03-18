@@ -15,7 +15,6 @@ const addLiquidity = document.getElementById("add-liquidity");
 const removeLiquidity = document.getElementById("remove-liquidity");
 const stakeLiquidity = document.getElementById("stake-liquidity");
 const unstakeLiquidity = document.getElementById("unstake-liquidity");
-
 const backBasicBtn = document.querySelectorAll(".back-basic");
 const popupContainers = document.querySelectorAll(
 	".popup-content-container"

@@ -20,7 +20,7 @@ body .container {
 }
 
 .bg-container {
-  background-image: url("./images/BACKGROUND.png");
+  background-image: url("./images/BACKGROUND.jpg");
   background-position: center center;
   background-size: cover;
   background-repeat: no-repeat;
