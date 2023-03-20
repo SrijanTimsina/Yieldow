@@ -20,9 +20,8 @@ body .container {
 }
 
 .bg-container {
-  background-image: url("./images/BACKGROUND.jpg");
-  background-position: center center;
-  background-size: cover;
+  background-image: url("./images/BACKGROUND.png");
+  background-size: 100% 100%;
   background-repeat: no-repeat;
   margin: auto;
 }
@@ -34,7 +33,6 @@ body .container {
 }
 
 .bg-container .navbar {
-  background-color: #009051;
   width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -84,6 +82,10 @@ body .container {
   }
 }
 
+.bg-container .analytics-container .navbar {
+  background-color: #009051;
+}
+
 .bg-container .home-container {
   padding: 40px;
   width: 100%;
@@ -91,6 +93,7 @@ body .container {
   opacity: 0;
   -webkit-animation: fade-in 1.5s ease-in-out forwards;
           animation: fade-in 1.5s ease-in-out forwards;
+  position: relative;
 }
 
 @-webkit-keyframes fade-in {
@@ -112,9 +115,9 @@ body .container {
 }
 
 .bg-container .home-container .main-section {
-  color: #009051;
   padding: 50px 35px;
-  color: #009051;
+  color: #a0cd69;
+  color: #a9d16d;
 }
 
 .bg-container .home-container .main-section h1 {
@@ -137,32 +140,29 @@ body .container {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  gap: 20px;
+  position: absolute;
+  bottom: 0px;
+  left: 0;
+  width: 100%;
 }
 
 .bg-container .home-container .main-section .buttons .btn {
-  padding: 20px 30px;
-  background-color: red;
-  border-radius: 15px;
+  cursor: pointer;
+  padding: 0px 0px 30px 0;
+  width: 50%;
+  text-align: center;
   outline: none;
-  -webkit-transition: background 1s;
-  transition: background 1s;
-}
-
-.bg-container .home-container .main-section .buttons .app-btn,
-.bg-container .home-container .main-section .buttons .analytics-btn:hover,
-.bg-container .home-container .main-section .buttons .analytics-btn:focus {
-  background-color: #009051;
   color: white;
-  border: white 3px solid;
+  font-size: 24px;
 }
 
-.bg-container .home-container .main-section .buttons .analytics-btn,
-.bg-container .home-container .main-section .buttons .app-btn:hover,
-.bg-container .home-container .main-section .buttons .app-btn:focus {
-  background-color: white;
-  color: #009051;
-  border: #009051 3px solid;
+.bg-container .home-container .main-section .buttons .app-btn {
+  padding-right: 100px;
+  border-right: 2px solid white;
+}
+
+.bg-container .home-container .main-section .buttons .analytics-btn {
+  padding-left: 20px;
 }
 
 @media screen and (max-width: 605px) {
@@ -172,14 +172,10 @@ body .container {
   .bg-container .home-container .main-section p {
     font-size: 16px;
   }
+}
+
+@media screen and (max-width: 605px) and (max-width: 450px) {
   .bg-container .home-container .main-section .buttons {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    width: -webkit-max-content;
-    width: -moz-max-content;
-    width: max-content;
     gap: 10px;
   }
 }

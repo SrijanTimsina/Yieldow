@@ -1,25 +1,3 @@
-document.querySelectorAll(".navbar").forEach((el) => {
-	el.innerHTML = `<div class="empty"></div>
-    <div class="logo">
-    <a href="#home" class='navbar-home-btn'>
-        <img src="./images/logo.png" alt="YieldoW"/>
-        </a>
-    </div>
-    <div class="social">
-        <a href="">
-            <img src="./images/discord.png" alt="Discord" />
-            </a>
-        <a href="">
-            <img src="./images/twitter.png" alt="Twitter" />
-        </a>
-        <a href="">
-            <img
-                src="./images/icons8-github-32.png"
-                alt="Github"
-            />
-        </a>
-    </div>`;
-});
 const chart = document.getElementById("chart");
 const activeUsers = document.getElementById("active-users");
 const bestTokens = document.getElementById("best-token");

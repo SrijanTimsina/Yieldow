@@ -21,9 +21,8 @@ body {
 	}
 }
 .bg-container {
-	background-image: url("./images/BACKGROUND.jpg");
-	background-position: center center;
-	background-size: cover;
+	background-image: url("./images/BACKGROUND.png");
+	background-size: 100% 100%;
 	background-repeat: no-repeat;
 	margin: auto;
 
@@ -34,7 +33,6 @@ body {
 	}
 
 	.navbar {
-		background-color: $primary-col;
 		width: 100%;
 		display: flex;
 		justify-content: space-between;
@@ -80,6 +78,11 @@ body {
 			}
 		}
 	}
+	.analytics-container {
+		.navbar {
+			background-color: $primary-col;
+		}
+	}
 
 	.home-container {
 		padding: 40px;
@@ -87,6 +90,7 @@ body {
 		min-height: 100vh;
 		opacity: 0;
 		animation: fade-in 1.5s ease-in-out forwards;
+		position: relative;
 		@keyframes fade-in {
 			from {
 				opacity: 0;
@@ -97,9 +101,10 @@ body {
 		}
 
 		.main-section {
-			color: $primary-col;
 			padding: 50px 35px;
-			color: $primary-col;
+			// color: $primary-col;
+			color: #a0cd69;
+			color: rgb(169, 209, 109);
 			h1 {
 				font-weight: bolder;
 				text-shadow: 2px 0 #fff, -2px 0 #fff, 0 2px #fff, 0 -2px #fff,
@@ -118,27 +123,25 @@ body {
 			.buttons {
 				margin-top: 50px;
 				display: flex;
-				gap: 20px;
+				position: absolute;
+				bottom: 0px;
+				left: 0;
+				width: 100%;
 				.btn {
-					padding: 20px 30px;
-					background-color: red;
-					border-radius: 15px;
+					cursor: pointer;
+					padding: 0px 0px 30px 0;
+					width: 50%;
+					text-align: center;
 					outline: none;
-					transition: background 1s;
-				}
-				.app-btn,
-				.analytics-btn:hover,
-				.analytics-btn:focus {
-					background-color: $primary-col;
 					color: white;
-					border: white 3px solid;
+					font-size: 24px;
 				}
-				.analytics-btn,
-				.app-btn:hover,
-				.app-btn:focus {
-					background-color: white;
-					color: $primary-col;
-					border: $primary-col 3px solid;
+				.app-btn {
+					padding-right: 100px;
+					border-right: 2px solid white;
+				}
+				.analytics-btn {
+					padding-left: 20px;
 				}
 			}
 			@media screen and (max-width: 605px) {
@@ -148,10 +151,11 @@ body {
 				p {
 					font-size: 16px;
 				}
-				.buttons {
-					flex-direction: column;
-					width: max-content;
-					gap: 10px;
+
+				@media screen and (max-width: 450px) {
+					.buttons {
+						gap: 10px;
+					}
 				}
 			}
 		}
