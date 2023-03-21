@@ -6,6 +6,7 @@ const closePopup = document.getElementById("popup-close");
 const sidebarContainer = document.getElementById(
 	"side-bar-container"
 );
+const popupContainer = document.getElementById("stake-popup");
 const btnAdd = document.getElementById("btn-add");
 const btnRemove = document.getElementById("btn-remove");
 const btnStake = document.getElementById("btn-stake");
@@ -60,3 +61,10 @@ popupButton.forEach((el) => {
 });
 mobileData.forEach((el) => el.addEventListener("click", popupToggle));
 dataRow.forEach((el) => el.addEventListener("click", popupToggle));
+
+popupContainer.addEventListener("click", (e) => {
+	e.preventDefault();
+	if (e.target.classList.contains("stake-popup")) {
+		popupToggle();
+	}
+});

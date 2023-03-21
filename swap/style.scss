@@ -22,7 +22,7 @@ body {
 
 .container {
 	padding: 10px;
-	background-color: $color-gray;
+	background-color: rgba($color-gray, 0.3);
 	min-height: 100vh;
 	position: relative;
 
@@ -145,6 +145,7 @@ body {
 				border: 0;
 				margin: 15px 0;
 				font-size: 16px;
+				font-weight: bolder;
 
 				&::-webkit-outer-spin-button,
 				&::-webkit-inner-spin-button {
@@ -200,27 +201,26 @@ body {
 					height: 20px;
 				}
 			}
-			.sidebar-social {
-				display: flex;
-				justify-content: space-between;
-				position: absolute;
-				bottom: 0;
-				left: 0;
-				width: 100%;
-				padding: 20px 30px;
-
-				button {
-					cursor: pointer;
-					background-color: transparent;
-					border: 2px solid white;
-					color: white;
-					padding: 10px 20px;
-					border-radius: 10px;
-				}
-			}
 			.close {
 				display: none;
 			}
+		}
+		.sidebar-social {
+			display: flex;
+			justify-content: flex-end;
+
+			button {
+				cursor: pointer;
+				background-color: $primary-light-col;
+				border: none;
+				color: white;
+				padding: 10px 20px;
+				border-radius: 10px;
+				font-weight: bolder;
+			}
+		}
+		.main-section-wrapper {
+			width: 100%;
 		}
 		.main-section-container {
 			background-color: white;
@@ -229,7 +229,8 @@ body {
 			padding: 30px;
 			animation: slide-left 1.5s ease-in-out forwards;
 			min-height: calc(100vh - 20px);
-
+			position: relative;
+			margin-top: 10px;
 			.heading {
 				padding-bottom: 20px;
 				border-bottom: 4px solid $color-gray;
