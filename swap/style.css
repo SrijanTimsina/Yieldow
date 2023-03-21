@@ -226,7 +226,7 @@ body button {
 }
 
 .container .main .sidebar-container {
-  background-color: #009051;
+  background-color: #a0cd69;
   padding: 50px;
   border-radius: 20px;
 }
@@ -246,6 +246,11 @@ body button {
 
 .container .main .sidebar-container ul li {
   margin-bottom: 20px;
+}
+
+.container .main .sidebar-container ul li a {
+  text-decoration: none;
+  color: white;
 }
 
 .container .main .sidebar-container .logo img {
@@ -505,7 +510,7 @@ body button {
 }
 
 .container .main-navbar {
-  background-color: #009051;
+  background-color: #a0cd69;
   width: calc(100% + 20px);
   margin-bottom: 10px;
   margin-top: -10px;

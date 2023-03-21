@@ -2,7 +2,7 @@
 
 $primary-col: #009051;
 $color-gray: #d6d5d5;
-
+$primary-light-col: #a0cd69;
 * {
 	margin: 0;
 	padding: 0;
@@ -173,7 +173,7 @@ body {
 		gap: 10px;
 		overflow: hidden;
 		.sidebar-container {
-			background-color: $primary-col;
+			background-color: $primary-light-col;
 			padding: 50px;
 			border-radius: 20px;
 
@@ -188,6 +188,11 @@ body {
 
 				li {
 					margin-bottom: 20px;
+
+					a {
+						text-decoration: none;
+						color: white;
+					}
 				}
 			}
 			.logo {
@@ -396,7 +401,7 @@ body {
 		}
 	}
 	.main-navbar {
-		background-color: $primary-col;
+		background-color: $primary-light-col;
 		width: calc(100% + 20px);
 		margin-bottom: 10px;
 		margin-top: -10px;

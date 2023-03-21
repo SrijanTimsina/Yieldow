@@ -20,7 +20,7 @@ body .container {
 }
 
 .bg-container {
-  background-image: url("./images/BACKGROUND.png");
+  background-image: url("./images/BACKGROUND.jpg");
   background-size: 100% 100%;
   background-repeat: no-repeat;
   margin: auto;
@@ -83,7 +83,7 @@ body .container {
 }
 
 .bg-container .analytics-container .navbar {
-  background-color: #009051;
+  background-color: #a0cd69;
 }
 
 .bg-container .home-container {
@@ -131,8 +131,8 @@ body .container {
   font-weight: bolder;
   font-size: 20px;
   margin-top: 20px;
-  text-shadow: 2px 0 #fff, -2px 0 #fff, 0 2px #fff, 0 -2px #fff, 1px 1px #fff, -1px -1px #fff, 1px -1px #fff, -1px 1px #fff;
-  letter-spacing: 1px;
+  text-shadow: 1px 0 #fff, -1px 0 #fff, 0 1px #fff, 0 -1px #fff, 1px 1px #fff, -1px -1px #fff, 1px -1px #fff, -1px 1px #fff;
+  letter-spacing: 2px;
 }
 
 .bg-container .home-container .main-section .buttons {
@@ -157,7 +157,6 @@ body .container {
 }
 
 .bg-container .home-container .main-section .buttons .app-btn {
-  padding-right: 100px;
   border-right: 2px solid white;
 }
 
@@ -177,6 +176,9 @@ body .container {
 @media screen and (max-width: 605px) and (max-width: 450px) {
   .bg-container .home-container .main-section .buttons {
     gap: 10px;
+  }
+  .bg-container .home-container .main-section .buttons .btn {
+    font-size: 16px;
   }
 }
 
@@ -387,7 +389,7 @@ body .container {
 }
 
 .bg-container .analytics-container .analytics-content .sitemap {
-  background-color: #009051;
+  background-color: #a0cd69;
   padding: 20px;
   border-radius: 20px;
   color: white;
