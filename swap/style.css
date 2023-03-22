@@ -80,7 +80,7 @@ body button {
   padding: 30px;
   border-radius: 20px;
   overflow: auto;
-  max-height: 80vh;
+  max-height: 90vh;
   position: relative;
 }
 
@@ -226,7 +226,7 @@ body button {
 
 .container .main .sidebar-container {
   background-color: #a0cd69;
-  padding: 0 50px 50px 50px;
+  padding: 30px 50px 50px 50px;
   position: relative;
 }
 
@@ -240,7 +240,7 @@ body button {
 .container .main .sidebar-container ul {
   list-style: none;
   color: white;
-  margin-top: 50px;
+  margin-top: 40px;
 }
 
 .container .main .sidebar-container ul li {
@@ -271,8 +271,8 @@ body button {
 
 .container .main .sidebar-container .sidebar-social button {
   cursor: pointer;
-  background-color: transparent;
-  border: 2px solid white;
+  background-color: #72914c;
+  border: none;
   color: white;
   padding: 10px 20px;
   border-radius: 10px;
@@ -286,16 +286,45 @@ body button {
 }
 
 .container .main .main-section-wrapper {
-  padding: 10px;
   width: 100%;
+  -webkit-animation: slide-left 1.5s ease-in-out forwards;
+          animation: slide-left 1.5s ease-in-out forwards;
+}
+
+.container .main .main-section-wrapper .main-navbar-full-screen {
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  background-color: #a0cd69;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  justify-content: flex-end;
+  padding: 10px;
+  margin-left: -1px;
+}
+
+.container .main .main-section-wrapper .main-navbar-full-screen button {
+  cursor: pointer;
+  background-color: #72914c;
+  border: none;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 10px;
+  font-weight: bolder;
+}
+
+@media screen and (max-width: 605px) {
+  .container .main .main-section-wrapper .main-navbar-full-screen {
+    display: none;
+  }
 }
 
 .container .main .main-section-container {
+  margin: 10px;
   background-color: white;
   border-radius: 20px;
   padding: 30px;
-  -webkit-animation: slide-left 1.5s ease-in-out forwards;
-          animation: slide-left 1.5s ease-in-out forwards;
   min-height: calc(100vh - 70px);
   position: relative;
 }
@@ -518,50 +547,14 @@ body button {
 
 .container .main-navbar {
   background-color: #a0cd69;
-  padding: 10px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-}
-
-.container .main-navbar .main-navbar-full-screen,
-.container .main-navbar .main-navbar-mobile {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  width: 100%;
-}
-
-.container .main-navbar .main-navbar-mobile {
+  padding: 17px;
   display: none;
-}
-
-.container .main-navbar .main-navbar-full-screen {
-  -webkit-box-pack: end;
-      -ms-flex-pack: end;
-          justify-content: flex-end;
-}
-
-.container .main-navbar .main-navbar-full-screen button {
-  cursor: pointer;
-  background-color: #009051;
-  border: none;
-  color: white;
-  padding: 10px 20px;
-  border-radius: 10px;
-  font-weight: bolder;
 }
 
 .container .main-navbar img {
@@ -574,15 +567,6 @@ body button {
 
 @media screen and (max-width: 605px) {
   .container .main-navbar {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    padding: 20px;
-  }
-  .container .main-navbar .main-navbar-full-screen {
-    display: none;
-  }
-  .container .main-navbar .main-navbar-mobile {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
