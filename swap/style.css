@@ -78,9 +78,8 @@ body button {
   width: 90%;
   max-width: 600px;
   padding: 30px;
-  border-radius: 20px;
   overflow: auto;
-  max-height: 90vh;
+  max-height: 100%;
   position: relative;
 }
 
