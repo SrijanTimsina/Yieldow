@@ -21,7 +21,6 @@ body button {
 }
 
 .container {
-  padding: 10px;
   background-color: rgba(214, 213, 213, 0.3);
   min-height: 100vh;
   position: relative;
@@ -222,14 +221,13 @@ body button {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  gap: 10px;
   overflow: hidden;
 }
 
 .container .main .sidebar-container {
   background-color: #a0cd69;
-  padding: 50px;
-  border-radius: 20px;
+  padding: 0 50px 50px 50px;
+  position: relative;
 }
 
 @media screen and (min-width: 605px) {
@@ -262,39 +260,44 @@ body button {
   display: none;
 }
 
-.container .main .sidebar-social {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: end;
-      -ms-flex-pack: end;
-          justify-content: flex-end;
+.container .main .sidebar-container .sidebar-social {
+  position: absolute;
+  bottom: 20px;
+  left: 0;
+  width: 100%;
+  text-align: center;
+  display: none;
 }
 
-.container .main .sidebar-social button {
+.container .main .sidebar-container .sidebar-social button {
   cursor: pointer;
-  background-color: #a0cd69;
-  border: none;
+  background-color: transparent;
+  border: 2px solid white;
   color: white;
   padding: 10px 20px;
   border-radius: 10px;
   font-weight: bolder;
 }
 
+@media screen and (max-width: 605px) {
+  .container .main .sidebar-container .sidebar-social {
+    display: block;
+  }
+}
+
 .container .main .main-section-wrapper {
+  padding: 10px;
   width: 100%;
 }
 
 .container .main .main-section-container {
   background-color: white;
-  width: 100%;
   border-radius: 20px;
   padding: 30px;
   -webkit-animation: slide-left 1.5s ease-in-out forwards;
           animation: slide-left 1.5s ease-in-out forwards;
-  min-height: calc(100vh - 20px);
+  min-height: calc(100vh - 70px);
   position: relative;
-  margin-top: 10px;
 }
 
 .container .main .main-section-container .heading {
@@ -456,7 +459,8 @@ body button {
     position: absolute;
     top: 0;
     left: 0;
-    border-radius: 0;
+    right: 0;
+    padding-top: 50px;
     z-index: 100;
     height: 100%;
     width: 100%;
@@ -514,11 +518,7 @@ body button {
 
 .container .main-navbar {
   background-color: #a0cd69;
-  width: calc(100% + 20px);
-  margin-bottom: 10px;
-  margin-top: -10px;
-  padding: 10px 20px;
-  margin-left: -10px;
+  padding: 10px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -528,7 +528,40 @@ body button {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+}
+
+.container .main-navbar .main-navbar-full-screen,
+.container .main-navbar .main-navbar-mobile {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+}
+
+.container .main-navbar .main-navbar-mobile {
   display: none;
+}
+
+.container .main-navbar .main-navbar-full-screen {
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
+
+.container .main-navbar .main-navbar-full-screen button {
+  cursor: pointer;
+  background-color: #009051;
+  border: none;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 10px;
+  font-weight: bolder;
 }
 
 .container .main-navbar img {
@@ -541,6 +574,15 @@ body button {
 
 @media screen and (max-width: 605px) {
   .container .main-navbar {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    padding: 20px;
+  }
+  .container .main-navbar .main-navbar-full-screen {
+    display: none;
+  }
+  .container .main-navbar .main-navbar-mobile {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
